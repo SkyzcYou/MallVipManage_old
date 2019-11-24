@@ -9,9 +9,14 @@ import java.io.PrintWriter;
 
 public class IndexServlet extends HttpServlet {
     @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPost(req, resp);
+    }
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
-        out.println("中国");
+        System.out.println("嘀嘀嘀");
         super.doGet(req, resp);
     }
 }
